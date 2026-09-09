@@ -42,8 +42,8 @@ This document provides claim-by-claim traceability for every line in `VISION.md`
   * **Evidence**: `useAccessibleOrgs.ts` accepting `triggerGetKeys` parameter (PR #1796); cache invalidation on `permissionKey` change (PR #1793).
 * **Claim**: "Sistent renders graceful fallback states and placeholder glyphs when optional metadata is absent from API payloads."
   * **Evidence**: Component fallback rendering in `src/custom/UserSearchField/` (UserChip avatar fallbacks), `src/custom/DataTableToolbar/` placeholder handling.
-* **Claim**: "Every data-driven component exposes test IDs and ARIA labels for automated testing and accessibility compliance."
-  * **Evidence**: `src/custom/DataTableToolbar/` test IDs and ARIA tags (PR #1774 commit `c7868633`, PR #1790); accessibility audit fixes (PR #1774 commit `de805c2e`).
+* **Claim**: "Sistent instruments data-driven components with test IDs and ARIA labels for automated testing and accessibility compliance."
+  * **Evidence**: Test ID instrumentation and ARIA tags in `src/custom/DataTableToolbar/` (PR #1774 commit `c7868633`, PR #1790), `src/custom/SearchBar.tsx`, `src/custom/UniversalFilter.tsx`, `src/custom/CatalogDesignTable/`, and accessibility test coverage in `src/__testing__/`.
 
 ---
 

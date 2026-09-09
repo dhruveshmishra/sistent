@@ -19,7 +19,7 @@ Components do not invent private prop shapes or custom object structures when a 
 Sistent integrates authorization and organization context through headless hooks like useAccessibleOrgs and the Shield component.
 Sistent isolates permission evaluation from raw network calls by accepting caller-injected trigger parameters.
 Sistent renders graceful fallback states and placeholder glyphs when optional metadata is absent from API payloads.
-Every data-driven component exposes test IDs and ARIA labels for automated testing and accessibility compliance.
+Sistent instruments data-driven components with test IDs and ARIA labels for automated testing and accessibility compliance.
 
 ## Components remain composable primitives
 
