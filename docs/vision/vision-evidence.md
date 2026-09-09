@@ -40,6 +40,8 @@ This document provides claim-by-claim traceability for every line in `VISION.md`
   * **Evidence**: `src/hooks/useAccessibleOrgs.ts` (PR #1793, PR #1815, PR #1819); `src/custom/Shield/` and `PermissionSessionContext` (PR #1774).
 * **Claim**: "Sistent isolates permission evaluation from raw network calls by accepting caller-injected trigger parameters."
   * **Evidence**: `useAccessibleOrgs.ts` accepting `triggerGetKeys` parameter (PR #1796); cache invalidation on `permissionKey` change (PR #1793).
+* **Claim**: "Sistent renders graceful fallback states and placeholder glyphs when optional metadata is absent from API payloads."
+  * **Evidence**: Component fallback rendering in `src/custom/UserSearchField/` (UserChip avatar fallbacks), `src/custom/DataTableToolbar/` placeholder handling.
 * **Claim**: "Every data-driven component exposes test IDs and ARIA labels for automated testing and accessibility compliance."
   * **Evidence**: `src/custom/DataTableToolbar/` test IDs and ARIA tags (PR #1774 commit `c7868633`, PR #1790); accessibility audit fixes (PR #1774 commit `de805c2e`).
 
@@ -85,3 +87,12 @@ This document provides claim-by-claim traceability for every line in `VISION.md`
   * **Evidence**: Clean UI-only scope in `@sistent/sistent`.
 * **Claim**: "Sistent does not bypass design token contracts in favor of arbitrary style injections."
   * **Evidence**: Hard rule enforced across all styled components in `src/theme/`.
+
+---
+
+## Alignment & Resistance Criteria
+
+* **Claim**: "A change aligns when it strengthens design token fidelity, improves accessibility compliance, adheres to meshery/schemas data shapes, or enhances component composability across downstream applications."
+  * **Evidence**: Core project contribution standards in `README.md` and `CONTRIBUTING.md`.
+* **Claim**: "A change should be resisted when it embeds application-specific business logic, breaks theme token inheritance, introduces schema-divergent prop names, weakens accessibility gates, or breaks downstream Meshery UI integration."
+  * **Evidence**: Boundary review rules enforced in PRs (#1786, #1790) and automated CI integration gates in `.github/workflows/node-checks.yml`.
